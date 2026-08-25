@@ -1,0 +1,230 @@
+/* ============================================================
+   CASE STUDY PAGE — extends style.css design tokens with a
+   long-form article layout. Loaded after style.css.
+   ============================================================ */
+
+.case-hero{
+  padding:var(--sp-5) 0 var(--sp-6);
+}
+.back-row{ padding:var(--sp-3) 0 0; }
+.back-link{
+  font-family:var(--font-mono); font-size:.82rem; color:var(--slate);
+  display:inline-flex; align-items:center; gap:.4em; transition:color .2s ease;
+}
+.back-link:hover{ color:var(--teal-deep); }
+
+.case-hero h1{
+  font-size:clamp(2.4rem,5.6vw,3.9rem); line-height:1.03; letter-spacing:-.015em; margin-top:.5em;
+}
+.case-dek{
+  font-family:var(--font-display); font-style:italic; font-weight:500;
+  font-size:clamp(1.25rem,2.4vw,1.65rem); color:var(--teal-deep);
+  margin-top:.7em; max-width:44ch;
+}
+.case-meta{
+  display:flex; flex-wrap:wrap; gap:1.75rem; margin-top:var(--sp-4);
+  padding-top:var(--sp-3); border-top:1px solid var(--line);
+}
+.case-meta div{ display:flex; flex-direction:column; gap:.3rem; }
+.case-meta span{
+  font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--slate);
+}
+.case-meta strong{ font-family:var(--font-body); font-weight:600; color:var(--ink); font-size:.95rem; }
+
+.case-hero-figure{ margin-top:var(--sp-5); }
+
+/* ---- figures / images ---- */
+figure.case-figure{ margin:0; }
+.case-figure img{
+  width:100%; border-radius:var(--radius-md); border:1px solid var(--line);
+  box-shadow:0 24px 48px -28px rgba(34,38,42,.28);
+}
+.case-figure figcaption{
+  font-family:var(--font-mono); font-size:.76rem; color:var(--slate);
+  margin-top:.75rem; text-align:center;
+}
+.case-figure-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3);
+  margin:var(--sp-4) 0;
+}
+@media (max-width:700px){
+  .case-figure-grid{ grid-template-columns:1fr; }
+}
+
+/* ---- article sections ---- */
+.case-article{ max-width:960px; margin:0 auto; padding:0 var(--sp-4); }
+@media (max-width:640px){ .case-article{ padding:0 var(--sp-3); } }
+
+.case-section{ padding:var(--sp-6) 0; border-top:1px solid var(--line); }
+.case-section:first-of-type{ border-top:none; }
+.case-section .eyebrow{ margin-bottom:.6em; }
+.case-section h2{
+  font-size:clamp(1.7rem,3.2vw,2.25rem); letter-spacing:-.01em; margin-bottom:var(--sp-3);
+}
+.case-section p{
+  font-size:1.06rem; color:var(--ink-soft); margin-bottom:1.2em; max-width:100%;
+}
+.case-section p:last-child{ margin-bottom:0; }
+
+.case-sub{ margin-top:var(--sp-4); }
+.case-sub:first-child{ margin-top:var(--sp-2); }
+.case-sub h3{
+  font-size:1.25rem; margin-bottom:.5em; display:flex; align-items:baseline; gap:.6em;
+}
+.case-sub h3 .sub-index{
+  font-family:var(--font-mono); font-size:.8rem; color:var(--teal); font-weight:500;
+}
+
+/* full-bleed-ish wide wrapper for the hero image + galleries, wider than the article column */
+.case-wide{ max-width:1180px; margin:0 auto; padding:0 var(--sp-4); }
+@media (max-width:640px){ .case-wide{ padding:0 var(--sp-3); } }
+
+/* ---- CTA footer ---- */
+.case-cta{ background:var(--ink); color:#fff; padding:var(--sp-6) 0; text-align:center; }
+.case-cta h2{ color:#fff; font-size:clamp(1.8rem,4vw,2.5rem); }
+.case-cta p{ color:#B9BFBA; margin:var(--sp-2) auto 0; max-width:52ch; font-size:1.05rem; }
+.case-cta .hero-cta{ justify-content:center; margin-top:var(--sp-4); }
+.case-cta .btn-outline{ border-color:rgba(255,255,255,.3); color:#fff; }
+.case-cta .btn-outline:hover{ border-color:var(--teal); color:var(--teal); }
+
+/* ============================================================
+   DATA CASE STUDY EXTRAS — stat cards, custom charts, callouts
+   ============================================================ */
+
+/* light-mode stat cards (dark .stats/.stat already exist in style.css for the ink-bg band) */
+.data-stats{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:var(--sp-3); margin:var(--sp-4) 0 var(--sp-2);
+}
+.data-stat{
+  border:1px solid var(--line); border-left:3px solid var(--teal);
+  border-radius:var(--radius-sm); padding:var(--sp-3); background:var(--card);
+}
+.data-stat .num{
+  font-family:var(--font-display); font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:600; color:var(--ink); line-height:1;
+}
+.data-stat .label{
+  font-family:var(--font-mono); font-size:.76rem; color:var(--slate);
+  margin-top:.55rem; line-height:1.5;
+}
+
+/* callout box (twist / stronger-interpretation style note) */
+.callout{
+  background:var(--teal-pale); border-radius:var(--radius-md);
+  padding:var(--sp-3) var(--sp-4); margin:var(--sp-3) 0;
+  font-size:1rem; color:var(--ink); line-height:1.55;
+}
+.callout strong{ color:var(--teal-deep); }
+
+/* 100%-stacked quadrant chart */
+.quad-chart{
+  display:flex; align-items:flex-end; gap:var(--sp-4); justify-content:center;
+  margin:var(--sp-4) 0 var(--sp-2); flex-wrap:wrap;
+}
+.quad-col{ display:flex; flex-direction:column; align-items:center; gap:.65rem; }
+.quad-bar{
+  width:64px; height:280px; border-radius:8px; overflow:hidden;
+  display:flex; flex-direction:column; box-shadow:0 1px 0 rgba(0,0,0,.04) inset;
+}
+.quad-seg{
+  width:100%; display:flex; align-items:center; justify-content:center;
+  color:#fff; font-family:var(--font-mono); font-size:.66rem; font-weight:600;
+  overflow:hidden;
+}
+.quad-seg.calm{ background:var(--teal); }
+.quad-seg.happy{ background:#D99A34; }
+.quad-seg.sadcalm{ background:#8B93A1; }
+.quad-seg.sadintense{ background:#A24B4B; }
+.quad-year{ font-family:var(--font-mono); font-size:.82rem; font-weight:600; color:var(--ink); }
+
+.quad-legend{
+  display:flex; flex-wrap:wrap; gap:1.1rem; justify-content:center;
+  margin-top:var(--sp-2); font-family:var(--font-mono); font-size:.76rem; color:var(--ink-soft);
+}
+.quad-legend span{ display:inline-flex; align-items:center; gap:.45em; }
+.quad-legend i{ width:10px; height:10px; border-radius:3px; display:inline-block; }
+.quad-legend i.calm{ background:var(--teal); }
+.quad-legend i.happy{ background:#D99A34; }
+.quad-legend i.sadcalm{ background:#8B93A1; }
+.quad-legend i.sadintense{ background:#A24B4B; }
+
+/* raw vs adjusted comparison chart */
+.compare-chart{
+  display:flex; justify-content:center; gap:var(--sp-5); margin:var(--sp-4) 0 var(--sp-2); flex-wrap:wrap;
+}
+.compare-group{ display:flex; flex-direction:column; align-items:center; gap:.75rem; }
+.compare-group h4{
+  font-family:var(--font-mono); font-size:.78rem; font-weight:600; color:var(--ink-soft);
+  text-transform:uppercase; letter-spacing:.04em; margin:0;
+}
+.compare-bars{ display:flex; align-items:flex-end; gap:1.1rem; height:190px; }
+.compare-bar{ display:flex; flex-direction:column; align-items:center; justify-content:flex-end; width:64px; height:100%; }
+.compare-bar .fill{
+  width:100%; border-radius:6px 6px 0 0; display:flex; align-items:flex-start; justify-content:center;
+  padding-top:.4rem; color:#fff; font-family:var(--font-mono); font-weight:600; font-size:.8rem;
+}
+.compare-bar .fill.raw{ background:var(--ink); }
+.compare-bar .fill.adjusted{ background:var(--teal); }
+.compare-bar .tag{ font-family:var(--font-mono); font-size:.72rem; color:var(--slate); margin-top:.5rem; }
+
+@media (max-width:640px){
+  .quad-bar{ width:52px; height:220px; }
+  .compare-bars{ height:150px; }
+  .compare-bar{ width:52px; }
+}
+
+/* ---- data tables ---- */
+.table-wrap{ overflow-x:auto; margin:var(--sp-3) 0; border-radius:var(--radius-md); border:1px solid var(--line); }
+.data-table{ width:100%; border-collapse:collapse; font-size:.92rem; min-width:540px; }
+.data-table th{
+  background:var(--ink); color:#fff; font-family:var(--font-mono); font-size:.68rem;
+  text-transform:uppercase; letter-spacing:.05em; text-align:left; padding:.85em 1.1em; font-weight:500;
+}
+.data-table td{ padding:.85em 1.1em; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top; }
+.data-table tbody tr:last-child td{ border-bottom:none; }
+.data-table tbody tr:nth-child(even){ background:var(--paper-alt); }
+.data-table td.num, .data-table td strong{ color:var(--ink); font-weight:600; font-family:var(--font-mono); font-size:.9rem; }
+.data-table td.pos{ color:var(--teal-deep); font-weight:600; font-family:var(--font-mono); }
+
+/* ---- four-quadrant framework (2x2 visual grid) ---- */
+.quad-framework{
+  display:grid; grid-template-columns:96px 1fr 1fr; gap:2px;
+  background:var(--line); border-radius:var(--radius-md); overflow:hidden; margin:var(--sp-3) 0;
+}
+.qf-corner, .qf-axis-top{ background:var(--ink); color:#fff; }
+.qf-axis-top{
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  font-family:var(--font-mono); font-size:.72rem; letter-spacing:.03em; padding:.9em .5em;
+}
+.qf-axis-left{
+  background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center;
+  text-align:center; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.03em; padding:.5em;
+  writing-mode:vertical-rl; transform:rotate(180deg);
+}
+.qf-cell{ background:var(--card); padding:var(--sp-3); }
+.qf-cell h5{ font-family:var(--font-display); font-size:1.1rem; margin:0 0 .3em; color:var(--ink); font-weight:600; }
+.qf-cell span{ font-family:var(--font-mono); font-size:.72rem; color:var(--slate); line-height:1.5; }
+@media (max-width:600px){
+  .quad-framework{ grid-template-columns:70px 1fr 1fr; }
+  .qf-cell{ padding:var(--sp-2); }
+  .qf-cell h5{ font-size:.95rem; }
+}
+
+/* ---- info-card grids (Overview at-a-glance, Outcome demonstrates) ---- */
+.info-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--sp-3); margin:var(--sp-3) 0; }
+.info-card{ border:1px solid var(--line); border-radius:var(--radius-md); padding:var(--sp-3); background:var(--card); }
+.info-card h5{
+  font-family:var(--font-mono); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--teal-deep); margin:0 0 .55em;
+}
+.info-card p{ font-size:.94rem; color:var(--ink-soft); margin:0; line-height:1.55; }
+
+/* ---- plain dash list (guardrails, limits) ---- */
+.plain-list{ margin:var(--sp-2) 0; padding:0; list-style:none; }
+.plain-list li{
+  position:relative; padding-left:1.3em; margin-bottom:.65em; color:var(--ink-soft);
+  font-size:1.02rem; line-height:1.55;
+}
+.plain-list li:last-child{ margin-bottom:0; }
+.plain-list li::before{ content:"–"; position:absolute; left:0; color:var(--teal-deep); font-weight:600; }

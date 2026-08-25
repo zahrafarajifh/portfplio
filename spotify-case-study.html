@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Happiness to Intensity — Zahra Farajihormozi</title>
+<meta name="description" content="Data case study: a century of Spotify audio features reveals how music's emotional profile changed, and why the obvious popularity story is wrong. By Zahra Farajihormozi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Bonheur+Royale&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/case-study.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-row">
+    <a href="index.html" class="logo"><img src="images/personal-logo.svg" alt="Personal Logo"></a>
+    <nav class="links" id="navLinks">
+      <a href="index.html#about" data-lang="en">About</a>
+      <a href="index.html#about" data-lang="it">Chi Sono</a>
+      <a href="index.html#services" data-lang="en">Services</a>
+      <a href="index.html#services" data-lang="it">Servizi</a>
+      <a href="index.html#work" data-lang="en">Work</a>
+      <a href="index.html#work" data-lang="it">Progetti</a>
+      <div class="lang-switch" role="group" aria-label="Language / Lingua">
+        <button type="button" class="lang-btn is-active" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="it" aria-pressed="false">IT</button>
+      </div>
+      <a href="index.html#contact" class="nav-cta" data-lang="en">Contact</a>
+      <a href="index.html#contact" class="nav-cta" data-lang="it">Contatti</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<div class="case-wide back-row">
+  <a href="index.html#work" class="back-link" data-lang="en">← Back to portfolio</a>
+  <a href="index.html#work" class="back-link" data-lang="it">← Torna al portfolio</a>
+</div>
+
+<section class="case-hero">
+  <div class="case-wide">
+    <div data-lang="en">
+      <p class="eyebrow">Data Case Study</p>
+      <h1>From Happiness to Intensity</h1>
+      <p class="case-dek">How the emotional architecture of music changed across a century, and what that means for better analytical decisions.</p>
+      <div class="case-meta">
+        <div><span>Role</span><strong>Data analysis, feature engineering, Tableau visualization, statistical validation, data storytelling</strong></div>
+        <div><span>Tools</span><strong>Python, Tableau</strong></div>
+      </div>
+      <div class="data-stats">
+        <div class="data-stat"><div class="num">169,909</div><div class="label">cleaned tracks</div></div>
+        <div class="data-stat"><div class="num">22</div><div class="label">analytical variables</div></div>
+        <div class="data-stat"><div class="num">100 years</div><div class="label">of music history</div></div>
+      </div>
+      <div class="callout">
+        <strong>Headline result:</strong> The strongest shift was not simply toward "sadder" music. Tracks became substantially more activated while positivity weakened in later decades, creating a large rise in low-valence, high-energy music.
+      </div>
+    </div>
+    <div data-lang="it">
+      <p class="eyebrow">Caso di Studio sui Dati</p>
+      <h1>Dalla Felicità all'Intensità</h1>
+      <p class="case-dek">Come è cambiata l'architettura emotiva della musica nell'arco di un secolo, e cosa significa per decisioni analitiche migliori.</p>
+      <div class="case-meta">
+        <div><span>Ruolo</span><strong>Analisi Dati, feature engineering, visualizzazione Tableau, validazione statistica, data storytelling</strong></div>
+        <div><span>Strumenti</span><strong>Python, Tableau</strong></div>
+      </div>
+      <div class="data-stats">
+        <div class="data-stat"><div class="num">169.909</div><div class="label">brani puliti</div></div>
+        <div class="data-stat"><div class="num">22</div><div class="label">variabili analitiche</div></div>
+        <div class="data-stat"><div class="num">100 anni</div><div class="label">di storia della musica</div></div>
+      </div>
+      <div class="callout">
+        <strong>Risultato principale:</strong> Il cambiamento più forte non è stato semplicemente verso una musica "più triste". I brani sono diventati molto più attivati mentre la positività si indeboliva nei decenni più recenti, creando una forte crescita della musica a bassa valence e alta energy.
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION: OVERVIEW -->
+<div class="case-article">
+<section class="case-section" id="overview">
+  <div data-lang="en">
+    <p class="eyebrow">Overview</p>
+    <h2>Case study at a glance</h2>
+    <p>I started with a simple idea: music contains measurable emotional signals. If those signals changed over a century, could the pattern reveal something useful about cultural change, and could it support better decisions in playlist design, catalog strategy, or recommendation systems?</p>
+    <p>The challenge was to make the analysis psychologically meaningful without making claims the data couldn't support. The dataset describes tracks, not listeners. Every insight had to separate three things: what changed in the music, what psychology can plausibly help interpret, and what would require user-level behavioral data.</p>
+    <div class="info-grid">
+      <div class="info-card"><h5>Problem</h5><p>Turn a large historical audio dataset into a coherent story about emotional change, then translate that story into business-relevant decisions.</p></div>
+      <div class="info-card"><h5>My Role</h5><p>Frame research questions, clean and validate the data, engineer emotional features, build Tableau views, stress-test the findings, and write the final narrative.</p></div>
+      <div class="info-card"><h5>Dataset</h5><p>Public Spotify collection covering 1921–2020. The cleaned Silver table contains 169,909 tracks and 22 analytical fields.</p></div>
+      <div class="info-card"><h5>Quality Control</h5><p>185 tracks had suspect valence values and were excluded from valence-based analysis, leaving 169,724 usable records.</p></div>
+      <div class="info-card"><h5>Core Features</h5><p>Valence, energy, danceability, loudness, tempo, duration, mode, acousticness, popularity, year, and artist.</p></div>
+      <div class="info-card"><h5>Outcome</h5><p>A psychology-informed data story plus business recommendations, with explicit guardrails around causality and confounding.</p></div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Stage</th><th>Question</th><th>Why It Mattered</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Evolution</strong></td><td>How did valence and activation change?</td><td>Establish the century-long pattern.</td></tr>
+          <tr><td><strong>Emotional Map</strong></td><td>How did the four valence-energy quadrants shift?</td><td>Move beyond "happy vs. sad."</td></tr>
+          <tr><td><strong>Market Signal</strong></td><td>Which profiles look more popular today?</td><td>Test whether emotion relates to market appeal.</td></tr>
+          <tr><td><strong>Validation</strong></td><td>Do those effects survive time controls?</td><td>Avoid false business conclusions.</td></tr>
+          <tr><td><strong>Psychology</strong></td><td>What mechanisms could make negative/intense music useful?</td><td>Interpret carefully without claiming causality.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Panoramica</p>
+    <h2>Il caso di studio in breve</h2>
+    <p>Sono partita da un'idea semplice: la musica contiene segnali emotivi misurabili. Se questi segnali fossero cambiati nell'arco di un secolo, lo schema avrebbe potuto rivelare qualcosa di utile sul cambiamento culturale, magari a supporto di decisioni migliori nella progettazione di playlist, nella strategia di catalogo o nei sistemi di raccomandazione.</p>
+    <p>La sfida era rendere l'analisi psicologicamente significativa senza fare affermazioni che i dati non potessero sostenere. Il dataset descrive brani, non ascoltatori. Ogni risultato doveva quindi separare tre cose: cosa è cambiato nella musica, cosa la psicologia può plausibilmente aiutare a interpretare, e cosa richiederebbe dati comportamentali a livello di singolo utente.</p>
+    <div class="info-grid">
+      <div class="info-card"><h5>Problema</h5><p>Trasformare un ampio dataset audio storico in una storia coerente sul cambiamento emotivo, e tradurre quella storia in decisioni rilevanti per il business.</p></div>
+      <div class="info-card"><h5>Il Mio Ruolo</h5><p>Definire le domande di ricerca, pulire e validare i dati, progettare le feature emotive, costruire le viste Tableau, mettere alla prova i risultati e scrivere la narrazione finale.</p></div>
+      <div class="info-card"><h5>Dataset</h5><p>Raccolta pubblica Spotify che copre il periodo 1921–2020. La tabella Silver pulita contiene 169.909 brani e 22 campi analitici.</p></div>
+      <div class="info-card"><h5>Controllo Qualità</h5><p>185 brani avevano valori di valence sospetti e sono stati esclusi dall'analisi basata sulla valence, lasciando 169.724 record utilizzabili.</p></div>
+      <div class="info-card"><h5>Feature Principali</h5><p>Valence, energy, danceability, loudness, tempo, durata, mode, acousticness, popolarità, anno e artista.</p></div>
+      <div class="info-card"><h5>Risultato</h5><p>Una storia sui dati informata dalla psicologia, insieme a raccomandazioni di business, con avvertenze esplicite su causalità e variabili confondenti.</p></div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Fase</th><th>Domanda</th><th>Perché Contava</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Evoluzione</strong></td><td>Come sono cambiate valence e attivazione?</td><td>Stabilire lo schema di lungo periodo.</td></tr>
+          <tr><td><strong>Mappa Emotiva</strong></td><td>Come sono cambiati i quattro quadranti valence-energy?</td><td>Andare oltre "felice vs triste".</td></tr>
+          <tr><td><strong>Segnale di Mercato</strong></td><td>Quali profili sembrano più popolari oggi?</td><td>Verificare se l'emozione è legata al successo di mercato.</td></tr>
+          <tr><td><strong>Validazione</strong></td><td>Questi effetti resistono al controllo del tempo?</td><td>Evitare conclusioni di business sbagliate.</td></tr>
+          <tr><td><strong>Psicologia</strong></td><td>Quali meccanismi potrebbero rendere utile la musica negativa/intensa?</td><td>Interpretare con cautela senza rivendicare causalità.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SECTION: METHOD -->
+<div class="case-article">
+<section class="case-section" id="method">
+  <div data-lang="en">
+    <p class="eyebrow">Method</p>
+    <h2>From raw audio features to an emotional model</h2>
+    <p>The analysis uses Spotify valence as a measure of positive-versus-negative musical tone, and energy as a measure of perceptual intensity. Energy is not a direct psychological arousal measure, so it's used here as an acoustic activation proxy.</p>
+    <div class="quad-framework" role="img" aria-label="Two by two framework: valence versus energy, with four quadrants Calm and Positive, Happy and Energetic, Sad and Calm, and Sad and Intense">
+      <div class="qf-corner"></div>
+      <div class="qf-axis-top">LOW ENERGY</div>
+      <div class="qf-axis-top">HIGH ENERGY</div>
+      <div class="qf-axis-left">HIGH VALENCE</div>
+      <div class="qf-cell"><h5>Calm &amp; Positive</h5><span>Positive / low activation</span></div>
+      <div class="qf-cell"><h5>Happy &amp; Energetic</h5><span>Positive / high activation</span></div>
+      <div class="qf-axis-left">LOW VALENCE</div>
+      <div class="qf-cell"><h5>Sad &amp; Calm</h5><span>Negative / low activation</span></div>
+      <div class="qf-cell"><h5>Sad &amp; Intense*</h5><span>Negative / high activation</span></div>
+    </div>
+    <p style="font-size:.85rem;color:var(--slate);max-width:100%;">*Referred to as "activated-negative" in the findings below, low valence doesn't uniquely mean sadness. A high-energy, low-valence track may communicate tension, anger, urgency, or cathartic intensity.</p>
+    <p><strong>Analytical guardrails:</strong></p>
+    <ul class="plain-list">
+      <li>Spotify popularity is a present-day metric, not the historical popularity of a song when it was released.</li>
+      <li>Early years contain fewer tracks, so year-to-year volatility is less stable than in later decades.</li>
+      <li>Audio features describe musical properties; they do not measure listener mood, personality, or intention.</li>
+      <li>Associations were treated as associations. Where a pattern could be explained by release era, I tested that confounder before turning it into a business claim.</li>
+    </ul>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Metodo</p>
+    <h2>Dalle audio feature grezze a un modello emotivo</h2>
+    <p>L'analisi usa la valence di Spotify come misura del tono musicale positivo o negativo, e l'energy come misura dell'intensità percettiva. Energy non è una misura psicologica diretta dell'arousal, quindi viene usata qui come proxy acustico di attivazione.</p>
+    <div class="quad-framework" role="img" aria-label="Schema 2x2: valence contro energy, con quattro quadranti Calm and Positive, Happy and Energetic, Sad and Calm, e Sad and Intense">
+      <div class="qf-corner"></div>
+      <div class="qf-axis-top">ENERGY BASSA</div>
+      <div class="qf-axis-top">ENERGY ALTA</div>
+      <div class="qf-axis-left">VALENCE ALTA</div>
+      <div class="qf-cell"><h5>Calm &amp; Positive</h5><span>Positiva / bassa attivazione</span></div>
+      <div class="qf-cell"><h5>Happy &amp; Energetic</h5><span>Positiva / alta attivazione</span></div>
+      <div class="qf-axis-left">VALENCE BASSA</div>
+      <div class="qf-cell"><h5>Sad &amp; Calm</h5><span>Negativa / bassa attivazione</span></div>
+      <div class="qf-cell"><h5>Sad &amp; Intense*</h5><span>Negativa / alta attivazione</span></div>
+    </div>
+    <p style="font-size:.85rem;color:var(--slate);max-width:100%;">*Chiamato "activated-negative" nei risultati più avanti, una valence bassa non significa necessariamente tristezza. Un brano ad alta energy e bassa valence può comunicare tensione, rabbia, urgenza o intensità catartica.</p>
+    <p><strong>Linee guida analitiche:</strong></p>
+    <ul class="plain-list">
+      <li>La popolarità Spotify è una metrica attuale, non la popolarità storica di un brano al momento della sua uscita.</li>
+      <li>I primi anni contengono meno brani, quindi la volatilità anno su anno è meno stabile rispetto ai decenni successivi.</li>
+      <li>Le audio feature descrivono proprietà musicali; non misurano l'umore, la personalità o le intenzioni dell'ascoltatore.</li>
+      <li>Le associazioni sono state trattate come associazioni. Dove uno schema poteva essere spiegato dall'epoca di uscita, ho testato quella variabile confondente prima di trasformarlo in un'affermazione di business.</li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<!-- SECTION: FINDING1 -->
+<div class="case-article">
+<section class="case-section" id="finding1">
+  <div data-lang="en">
+    <p class="eyebrow">Finding One</p>
+    <h2>Music became more activated, not simply sadder</h2>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Prima Scoperta</p>
+    <h2>La musica è diventata più attivata, non semplicemente più triste</h2>
+  </div>
+</section>
+</div>
+
+<div class="case-wide">
+  <figure class="case-figure">
+    <img src="images/case-study-spotify/emotional-evaluation.png" alt="Line chart of average valence and energy by year, 1921-2020" width="1200" height="570" loading="lazy">
+    <figcaption data-lang="en">Annual average valence and energy in the cleaned dataset, 1921–2020.</figcaption>
+    <figcaption data-lang="it">Valence ed energy medie annuali nel dataset pulito, 1921–2020.</figcaption>
+  </figure>
+</div>
+
+<div class="case-article">
+<section class="case-section" style="border-top:none;padding-top:var(--sp-4);">
+  <div data-lang="en">
+    <div class="data-stats">
+      <div class="data-stat"><div class="num">0.348 → 0.694</div><div class="label">energy, 1960–2010</div></div>
+      <div class="data-stat"><div class="num">+99.8%</div><div class="label">increase in energy</div></div>
+      <div class="data-stat"><div class="num">0.603 → 0.448</div><div class="label">valence, 1980–2018</div></div>
+    </div>
+    <p>Energy nearly doubled between 1960 and 2010, while valence moved in the opposite direction after its 1980 high. The important shift is the separation between activation and positivity: modern tracks remained highly activated even as their average positive tone weakened.</p>
+    <div class="callout"><strong>Storyline.</strong> The catalog did not simply become "sad." It became more intense while becoming less uniformly positive.</div>
+    <p>I interpreted the early decades cautiously because sample sizes were much smaller. The long-term direction after the middle of the century is much more stable than the jagged year-to-year movement in the 1920s and 1930s.</p>
+  </div>
+  <div data-lang="it">
+    <div class="data-stats">
+      <div class="data-stat"><div class="num">0,348 → 0,694</div><div class="label">energy, 1960–2010</div></div>
+      <div class="data-stat"><div class="num">+99,8%</div><div class="label">aumento dell'energy</div></div>
+      <div class="data-stat"><div class="num">0,603 → 0,448</div><div class="label">valence, 1980–2018</div></div>
+    </div>
+    <p>L'energy è quasi raddoppiata tra il 1960 e il 2010, mentre la valence si è mossa nella direzione opposta dopo il suo picco del 1980. Il cambiamento importante è la separazione tra attivazione e positività: i brani moderni sono rimasti molto attivati anche mentre il loro tono positivo medio si indeboliva.</p>
+    <div class="callout"><strong>Storyline.</strong> Il catalogo non è semplicemente diventato "triste". È diventato più intenso, diventando allo stesso tempo meno uniformemente positivo.</div>
+    <p>Ho interpretato i primi decenni con cautela perché i campioni erano molto più piccoli. La direzione di lungo periodo dopo la metà del secolo è molto più stabile del movimento irregolare anno su anno degli anni '20 e '30.</p>
+  </div>
+</section>
+</div>
+<!-- SECTION: FINDING2 -->
+<div class="case-article"> 
+<section class="case-section" id="finding2">
+  <div data-lang="en">
+    <p class="eyebrow">Finding Two</p>
+    <h2>Activated-negative music became a major part of the catalog</h2>
+    <p>To see the shift more clearly, I split every track into four quadrants using valence and energy together. "Activated-negative" tracks sound emotionally negative but are physically intense, closer to tension, urgency, or catharsis than to quiet sadness (the dashboard label is "Sad &amp; Intense," for readability).</p>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Seconda Scoperta</p>
+    <h2>La musica activated-negative è diventata una parte importante del catalogo</h2>
+    <p>Per vedere il cambiamento più chiaramente, ho diviso ogni brano in quattro quadranti combinando valence ed energy. I brani "activated-negative" suonano emotivamente negativi ma sono fisicamente intensi, più vicini a tensione, urgenza o catarsi che a una tristezza silenziosa (l'etichetta sulla dashboard è "Sad &amp; Intense", per leggibilità).</p>
+  </div>
+
+  <div class="quad-chart" role="img" aria-label="Stacked bar chart showing the four emotional quadrants' share of tracks in 1960, 1980, 2015, and 2020">
+    <div class="quad-col">
+      <div class="quad-bar">
+        <div class="quad-seg happy" style="height:21.9%">21.9%</div>
+        <div class="quad-seg calm" style="height:32.8%">32.8%</div>
+        <div class="quad-seg sadcalm" style="height:43.3%">43.3%</div>
+        <div class="quad-seg sadintense" style="height:2.0%"></div>
+      </div>
+      <span class="quad-year">1960</span>
+    </div>
+    <div class="quad-col">
+      <div class="quad-bar">
+        <div class="quad-seg happy" style="height:51.6%">51.6%</div>
+        <div class="quad-seg calm" style="height:13.9%">13.9%</div>
+        <div class="quad-seg sadcalm" style="height:19.6%">19.6%</div>
+        <div class="quad-seg sadintense" style="height:15.0%">15%</div>
+      </div>
+      <span class="quad-year">1980</span>
+    </div>
+    <div class="quad-col">
+      <div class="quad-bar">
+        <div class="quad-seg happy" style="height:35.3%">35.3%</div>
+        <div class="quad-seg calm" style="height:4.6%"></div>
+        <div class="quad-seg sadcalm" style="height:19.7%">19.7%</div>
+        <div class="quad-seg sadintense" style="height:40.4%">40.4%</div>
+      </div>
+      <span class="quad-year">2015</span>
+    </div>
+    <div class="quad-col">
+      <div class="quad-bar">
+        <div class="quad-seg happy" style="height:40.5%">40.5%</div>
+        <div class="quad-seg calm" style="height:7.2%"></div>
+        <div class="quad-seg sadcalm" style="height:15.7%">15.7%</div>
+        <div class="quad-seg sadintense" style="height:36.6%">36.6%</div>
+      </div>
+      <span class="quad-year">2020</span>
+    </div>
+  </div>
+  <div class="quad-legend" aria-hidden="true">
+    <span><i class="happy"></i>Happy &amp; Energetic</span>
+    <span><i class="calm"></i>Calm &amp; Positive</span>
+    <span><i class="sadcalm"></i>Sad &amp; Calm</span>
+    <span><i class="sadintense"></i>Activated-negative</span>
+  </div>
+
+  <div data-lang="en">
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Year</th><th>Calm + Positive</th><th>Happy + Energetic</th><th>Sad + Calm</th><th>Activated-negative</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1960</strong></td><td>32.8%</td><td>21.9%</td><td>43.3%</td><td>2.0%</td></tr>
+          <tr><td><strong>1980</strong></td><td>13.9%</td><td>51.6%</td><td>19.6%</td><td>15.0%</td></tr>
+          <tr><td><strong>2015</strong></td><td>4.6%</td><td>35.3%</td><td>19.7%</td><td>40.4%</td></tr>
+          <tr><td><strong>2020</strong></td><td>7.2%</td><td>40.5%</td><td>15.7%</td><td>36.6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The biggest structural change is the rise of low-valence, high-energy music. It represented only 2.0% of tracks in 1960, but 36.6% in 2020, about eighteen times the earlier share. Calm &amp; Positive moved in the opposite direction, from 32.8% to 7.2%.</p>
+    <div class="callout"><strong>1980 is an important waypoint.</strong> 51.6% of tracks were Happy &amp; Energetic in 1980. This sits near an independently identified period of rapid stylistic change in popular music, but it does not mean people in 1980 were psychologically happier.</div>
+  </div>
+  <div data-lang="it">
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Anno</th><th>Calm + Positive</th><th>Happy + Energetic</th><th>Sad + Calm</th><th>Activated-negative</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1960</strong></td><td>32,8%</td><td>21,9%</td><td>43,3%</td><td>2,0%</td></tr>
+          <tr><td><strong>1980</strong></td><td>13,9%</td><td>51,6%</td><td>19,6%</td><td>15,0%</td></tr>
+          <tr><td><strong>2015</strong></td><td>4,6%</td><td>35,3%</td><td>19,7%</td><td>40,4%</td></tr>
+          <tr><td><strong>2020</strong></td><td>7,2%</td><td>40,5%</td><td>15,7%</td><td>36,6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Il cambiamento strutturale più grande è la crescita della musica a bassa valence e alta energy. Rappresentava solo il 2,0% dei brani nel 1960, ma il 36,6% nel 2020, circa diciotto volte la quota precedente. Calm &amp; Positive si è mossa nella direzione opposta, dal 32,8% al 7,2%.</p>
+    <div class="callout"><strong>Il 1980 è un punto di passaggio importante.</strong> Il 51,6% dei brani era Happy &amp; Energetic nel 1980. Questo si colloca vicino a un periodo di rapido cambiamento stilistico nella musica popolare identificato in modo indipendente, ma non significa che le persone nel 1980 fossero psicologicamente più felici.</div>
+  </div>
+</section>
+</div>
+<!-- SECTION: FINDING3 -->
+<div class="case-article">
+<section class="case-section" id="finding3">
+  <div data-lang="en">
+    <p class="eyebrow">Finding Three</p>
+    <h2>Music learned to move more without necessarily becoming happier</h2>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Terza Scoperta</p>
+    <h2>La musica ha imparato a muoversi di più senza diventare necessariamente più felice</h2>
+  </div>
+</section>
+</div>
+
+<div class="case-wide">
+  <figure class="case-figure">
+    <img src="images/case-study-spotify/danceability.png" alt="Line chart of average valence and danceability by year, 1921-2020" width="1200" height="570" loading="lazy">
+    <figcaption data-lang="en">Danceability rose while average valence weakened in the later decades.</figcaption>
+    <figcaption data-lang="it">La danceability è aumentata mentre la valence media si è indebolita nei decenni più recenti.</figcaption>
+  </figure>
+</div>
+
+<div class="case-article">
+<section class="case-section" style="border-top:none;padding-top:var(--sp-4);">
+  <div data-lang="en">
+    <div class="data-stats">
+      <div class="data-stat"><div class="num">0.558 → 0.673</div><div class="label">danceability, 1980–2020</div></div>
+      <div class="data-stat"><div class="num">+20.7%</div><div class="label">increase in danceability</div></div>
+      <div class="data-stat"><div class="num">r ≈ −0.63</div><div class="label">annual valence vs. danceability, 1980–2020</div></div>
+    </div>
+    <p>The divergence is visually clear: the tracks became increasingly movement-friendly while their average positive tone declined. The correlation is descriptive, not causal, but it captures a useful product insight, emotional negativity does not imply low physical activation.</p>
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;margin:var(--sp-3) 0 .6em;">The psychology lens</h3>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Psychological Lens</th><th>What the Literature Helps Explain</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Valence × activation</strong></td><td>Russell's Circumplex Model organizes affect by pleasantness and arousal; Spotify energy is used here only as an acoustic activation proxy.</td></tr>
+          <tr><td><strong>Mood regulation</strong></td><td>Listeners use music to regulate both mood and activation, so high-energy music can be useful even when valence is negative.</td></tr>
+          <tr><td><strong>Pleasurable sadness</strong></td><td>Sad music can support consolation, nostalgia, empathy, and the rewarding experience of being moved.</td></tr>
+          <tr><td><strong>Arousal matching</strong></td><td>For some listeners, intense negative music can match high arousal and support emotional processing rather than simply intensifying anger.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--slate);"><strong style="color:var(--ink-soft);">Interpretation boundary:</strong> these mechanisms make activated-negative music psychologically plausible and useful, but they do not prove that psychology caused the historical increase in this dataset.</p>
+  </div>
+  <div data-lang="it">
+    <div class="data-stats">
+      <div class="data-stat"><div class="num">0,558 → 0,673</div><div class="label">danceability, 1980–2020</div></div>
+      <div class="data-stat"><div class="num">+20,7%</div><div class="label">aumento della danceability</div></div>
+      <div class="data-stat"><div class="num">r ≈ −0,63</div><div class="label">valence vs. danceability annuale, 1980–2020</div></div>
+    </div>
+    <p>La divergenza è visivamente chiara: i brani sono diventati sempre più adatti al movimento mentre il loro tono positivo medio calava. La correlazione è descrittiva, non causale, ma coglie un'intuizione di prodotto utile, la negatività emotiva non implica una bassa attivazione fisica.</p>
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;margin:var(--sp-3) 0 .6em;">La lente psicologica</h3>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Lente Psicologica</th><th>Cosa Aiuta a Spiegare la Letteratura</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Valence × attivazione</strong></td><td>Il Circumplex Model di Russell organizza l'affetto secondo piacevolezza e arousal; l'energy di Spotify è usata qui solo come proxy acustico di attivazione.</td></tr>
+          <tr><td><strong>Regolazione dell'umore</strong></td><td>Gli ascoltatori usano la musica per regolare sia l'umore che l'attivazione, quindi la musica ad alta energy può essere utile anche quando la valence è negativa.</td></tr>
+          <tr><td><strong>Tristezza piacevole</strong></td><td>La musica triste può favorire consolazione, nostalgia, empatia e la gratificante esperienza di "essere commossi".</td></tr>
+          <tr><td><strong>Arousal matching</strong></td><td>Per alcuni ascoltatori, la musica negativa intensa può corrispondere a un arousal elevato e supportare l'elaborazione emotiva invece di intensificare semplicemente la rabbia.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--slate);"><strong style="color:var(--ink-soft);">Confine interpretativo:</strong> questi meccanismi rendono la musica activated-negative psicologicamente plausibile e utile, ma non dimostrano che la psicologia abbia causato l'aumento storico osservato in questo dataset.</p>
+  </div>
+</section>
+</div>
+
+<!-- SECTION: FINDING4 -->
+<div class="case-article">
+<section class="case-section" id="finding4">
+  <div data-lang="en">
+    <p class="eyebrow">Finding Four</p>
+    <h2>The chart that almost told the wrong business story</h2>
+    <p>The raw popularity view looked decisive: Activated-negative tracks had the highest average present-day Spotify popularity. If I had stopped at the dashboard, the conclusion would have been that listeners prefer activated-negative music.</p>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Emotional Profile</th><th>Raw Mean Popularity</th><th>Difference vs. Calm + Positive, After Controlling for Year</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Calm + Positive</strong></td><td class="num">18.91</td><td>Reference</td></tr>
+          <tr><td><strong>Happy + Energetic</strong></td><td class="num">40.00</td><td class="pos">+0.70</td></tr>
+          <tr><td><strong>Sad + Calm</strong></td><td class="num">24.39</td><td>−0.03</td></tr>
+          <tr><td><strong>Activated-negative</strong></td><td class="num">46.29</td><td class="pos">+0.15</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compare-chart" role="img" aria-label="Bar chart comparing raw popularity advantage to year-adjusted advantage for two emotional quadrants versus Calm and Positive">
+      <div class="compare-group">
+        <h4>Happy &amp; Energetic</h4>
+        <div class="compare-bars">
+          <div class="compare-bar"><div class="fill raw" style="height:77%">+21.09</div><span class="tag">Raw</span></div>
+          <div class="compare-bar"><div class="fill adjusted" style="height:6px">+0.70</div><span class="tag">Adjusted</span></div>
+        </div>
+      </div>
+      <div class="compare-group">
+        <h4>Activated-negative</h4>
+        <div class="compare-bars">
+          <div class="compare-bar"><div class="fill raw" style="height:100%">+27.38</div><span class="tag">Raw</span></div>
+          <div class="compare-bar"><div class="fill adjusted" style="height:6px">+0.15</div><span class="tag">Adjusted</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;margin:var(--sp-4) 0 .5em;">What changed after validation</h3>
+    <p>Once release year was controlled, the large apparent advantage almost disappeared. Recent tracks are both more likely to be activated-negative and structurally advantaged by Spotify's current popularity metric. The same pattern appears within decades, in the 2010s, all four emotional quadrants averaged roughly 59–60 popularity points. Emotional profile is useful for segmentation, but it is not a strong standalone explanation of current popularity.</p>
+
+    <div class="callout"><strong>Why this matters for a portfolio.</strong> This was the most important analytical moment in the project. It turned a visually persuasive chart into a lesson about confounding: what is common among popular tracks is not necessarily what causes popularity. For business decisions, time-aware validation matters more than an attractive correlation.</div>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Quarta Scoperta</p>
+    <h2>Il grafico che ha quasi raccontato la storia di business sbagliata</h2>
+    <p>La vista sulla popolarità grezza sembrava decisiva: i brani activated-negative avevano la popolarità media attuale più alta su Spotify. Se mi fossi fermata alla dashboard, la conclusione sarebbe stata che gli ascoltatori preferiscono la musica activated-negative.</p>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Profilo Emotivo</th><th>Popolarità Media Grezza</th><th>Differenza vs. Calm + Positive, Dopo il Controllo per Anno</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Calm + Positive</strong></td><td class="num">18,91</td><td>Riferimento</td></tr>
+          <tr><td><strong>Happy + Energetic</strong></td><td class="num">40,00</td><td class="pos">+0,70</td></tr>
+          <tr><td><strong>Sad + Calm</strong></td><td class="num">24,39</td><td>−0,03</td></tr>
+          <tr><td><strong>Activated-negative</strong></td><td class="num">46,29</td><td class="pos">+0,15</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compare-chart" role="img" aria-label="Grafico a barre che confronta il vantaggio di popolarità grezzo con quello corretto per anno, per due quadranti emotivi rispetto a Calm and Positive">
+      <div class="compare-group">
+        <h4>Happy &amp; Energetic</h4>
+        <div class="compare-bars">
+          <div class="compare-bar"><div class="fill raw" style="height:77%">+21,09</div><span class="tag">Grezzo</span></div>
+          <div class="compare-bar"><div class="fill adjusted" style="height:6px">+0,70</div><span class="tag">Corretto</span></div>
+        </div>
+      </div>
+      <div class="compare-group">
+        <h4>Activated-negative</h4>
+        <div class="compare-bars">
+          <div class="compare-bar"><div class="fill raw" style="height:100%">+27,38</div><span class="tag">Grezzo</span></div>
+          <div class="compare-bar"><div class="fill adjusted" style="height:6px">+0,15</div><span class="tag">Corretto</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;margin:var(--sp-4) 0 .5em;">Cosa è cambiato dopo la validazione</h3>
+    <p>Una volta controllato l'anno di uscita, il grande vantaggio apparente è quasi scomparso. I brani recenti hanno più probabilità di essere activated-negative e sono strutturalmente avvantaggiati dall'attuale metrica di popolarità di Spotify. Lo stesso schema appare all'interno dei singoli decenni, negli anni 2010, tutti e quattro i quadranti emotivi avevano in media circa 59–60 punti di popolarità. Il profilo emotivo è utile per la segmentazione, ma non è una spiegazione autonoma solida della popolarità attuale.</p>
+
+    <div class="callout"><strong>Perché questo conta per un portfolio.</strong> Questo è stato il momento analitico più importante del progetto. Ha trasformato un grafico visivamente persuasivo in una lezione sulle variabili confondenti: ciò che è comune tra i brani popolari non è necessariamente ciò che causa la popolarità. Per le decisioni di business, una validazione consapevole del tempo conta più di una correlazione attraente.</div>
+  </div>
+</section>
+</div>
+<!-- SECTION: EVIDENCE -->
+<div class="case-article">
+<section class="case-section" id="evidence">
+  <div data-lang="en">
+    <p class="eyebrow">Supporting Evidence</p>
+    <h2>Secondary signals that sharpened the story</h2>
+    <div class="info-grid">
+      <div class="info-card"><h5>Ambiguity Returned</h5><p>The Ambiguity Score reached a low of about 0.711 in 1975 and rose to about 0.978 by 2020. Modern tracks increasingly combine cues that don't point in one emotional direction.</p></div>
+      <div class="info-card"><h5>Major ≠ Automatically Happier</h5><p>Major-mode mean valence was 0.535 versus 0.527 for minor mode. The difference was only 0.0085 (Cohen's d = 0.033), and the yearly gap repeatedly crossed zero.</p></div>
+      <div class="info-card"><h5>Tracks Became Shorter</h5><p>Average duration fell from about 4.44 minutes in 1976 to 3.29 minutes in 2020, a 26% decline from the peak.</p></div>
+      <div class="info-card"><h5>Tracks Became Louder</h5><p>Average loudness moved from −13.73 dB in 1960 to −6.67 dB in 2010, reinforcing the broader rise in activation and production intensity.</p></div>
+    </div>
+    <div class="callout"><strong>Analytical takeaway.</strong> Emotional character is multi-feature. One variable, mode, valence, tempo, or energy, is rarely enough to explain the experience or the market outcome.</div>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Prove a Supporto</p>
+    <h2>Segnali secondari che hanno affinato la storia</h2>
+    <div class="info-grid">
+      <div class="info-card"><h5>L'Ambiguità È Tornata</h5><p>L'Ambiguity Score ha raggiunto un minimo di circa 0,711 nel 1975 ed è salito a circa 0,978 nel 2020. I brani moderni combinano sempre più spesso segnali che non puntano in un'unica direzione emotiva.</p></div>
+      <div class="info-card"><h5>Maggiore ≠ Automaticamente Più Felice</h5><p>La valence media del modo maggiore era 0,535 contro 0,527 del modo minore. La differenza era solo 0,0085 (Cohen's d = 0,033), e il divario annuale attraversava ripetutamente lo zero.</p></div>
+      <div class="info-card"><h5>I Brani Sono Diventati Più Corti</h5><p>La durata media è scesa da circa 4,44 minuti nel 1976 a 3,29 minuti nel 2020, un calo del 26% rispetto al picco.</p></div>
+      <div class="info-card"><h5>I Brani Sono Diventati Più Forti</h5><p>Il loudness medio è passato da −13,73 dB nel 1960 a −6,67 dB nel 2010, rafforzando la crescita più ampia di attivazione e intensità produttiva.</p></div>
+    </div>
+    <div class="callout"><strong>Conclusione analitica.</strong> Il carattere emotivo è multi-feature. Una sola variabile, mode, valence, tempo o energy, raramente basta a spiegare l'esperienza o il risultato di mercato.</div>
+  </div>
+</section>
+</div>
+
+<!-- SECTION: BUSINESS -->
+<div class="case-article">
+<section class="case-section" id="business">
+  <div data-lang="en">
+    <p class="eyebrow">Business Value</p>
+    <h2>Turning the analysis into business decisions</h2>
+    <p>The project is most useful when audio features are treated as a language for segmentation and product design, not as a shortcut to "hit prediction."</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Decision Area</th><th>What the Analysis Supports</th><th>What to Avoid</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Playlist design</strong></td><td>Use valence + energy together to distinguish calm, uplifting, reflective, and activated-negative experiences.</td><td>Treating all low-valence music as one mood.</td></tr>
+          <tr><td><strong>Catalog strategy</strong></td><td>Use emotional profiles to identify how a catalog is distributed and how that mix changed over time.</td><td>Assuming the largest current segment is automatically the best investment.</td></tr>
+          <tr><td><strong>Recommendation context</strong></td><td>Use activation and valence as contextual features alongside artist, genre, session, and behavior.</td><td>Predicting preference from audio features alone.</td></tr>
+          <tr><td><strong>Popularity modeling</strong></td><td>Use time-aware controls and temporal validation.</td><td>Using present-day popularity as if it were historical success at release.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;margin:var(--sp-4) 0 .3em;">What I would build next: audio + lyrics + behavior</h3>
+    <p>The next version should connect acoustic emotion to lyrical sentiment and actual listener outcomes, the point where the project can move from describing cultural change to predicting human behavior.</p>
+    <div class="info-grid">
+      <div class="info-card"><h5>Lyrics</h5><p>Positive emotion, sadness, anger, anxiety, self-focus, social connectedness, and audio-lyric congruence.</p></div>
+      <div class="info-card"><h5>Behavior</h5><p>Skip, completion, replay, save, playlist add, session length, and next-track choice.</p></div>
+      <div class="info-card"><h5>Context</h5><p>Time of day, workout/study/sleep context, previous track, and optional mood self-report.</p></div>
+      <div class="info-card"><h5>Modeling</h5><p>Temporal validation, interaction effects, personalized preference profiles, and next-track prediction.</p></div>
+    </div>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Valore per il Business</p>
+    <h2>Trasformare l'analisi in decisioni di business</h2>
+    <p>Il progetto è più utile quando le audio feature sono trattate come un linguaggio per la segmentazione e il product design, non come una scorciatoia per "prevedere un successo".</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Area Decisionale</th><th>Cosa Supporta l'Analisi</th><th>Cosa Evitare</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Progettazione playlist</strong></td><td>Usare valence + energy insieme per distinguere esperienze calme, positive, riflessive e activated-negative.</td><td>Trattare tutta la musica a bassa valence come un unico mood.</td></tr>
+          <tr><td><strong>Strategia di catalogo</strong></td><td>Usare i profili emotivi per capire come è distribuito un catalogo e come quel mix è cambiato nel tempo.</td><td>Assumere che il segmento attualmente più grande sia automaticamente il miglior investimento.</td></tr>
+          <tr><td><strong>Contesto di raccomandazione</strong></td><td>Usare attivazione e valence come feature di contesto insieme ad artista, genere, sessione e comportamento.</td><td>Prevedere le preferenze usando solo le audio feature.</td></tr>
+          <tr><td><strong>Modellazione della popolarità</strong></td><td>Usare controlli e validazione temporale.</td><td>Usare la popolarità attuale come se fosse il successo storico al momento dell'uscita.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;margin:var(--sp-4) 0 .3em;">Cosa costruirei dopo: audio + testi + comportamento</h3>
+    <p>La prossima versione dovrebbe collegare l'emozione acustica al sentiment dei testi e ai risultati reali degli ascoltatori, il punto in cui il progetto può passare dal descrivere il cambiamento culturale al prevedere il comportamento umano.</p>
+    <div class="info-grid">
+      <div class="info-card"><h5>Testi</h5><p>Emozione positiva, tristezza, rabbia, ansia, focus su di sé, connessione sociale e congruenza audio-testo.</p></div>
+      <div class="info-card"><h5>Comportamento</h5><p>Skip, completamento, riascolto, salvataggio, aggiunta a playlist, durata della sessione e scelta del brano successivo.</p></div>
+      <div class="info-card"><h5>Contesto</h5><p>Ora del giorno, contesto allenamento/studio/sonno, brano precedente e auto-dichiarazione facoltativa dell'umore.</p></div>
+      <div class="info-card"><h5>Modellazione</h5><p>Validazione temporale, effetti di interazione, profili di preferenza personalizzati e previsione del brano successivo.</p></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SECTION: OUTCOME -->
+<div class="case-article">
+<section class="case-section" id="outcome">
+  <div data-lang="en">
+    <p class="eyebrow">Outcome</p>
+    <h2>What this case study demonstrates</h2>
+    <div class="info-grid">
+      <div class="info-card"><h5>Data Engineering Mindset</h5><p>Cleaning, quality flags, reliable time fields, and feature definitions before visualization.</p></div>
+      <div class="info-card"><h5>Research Framing</h5><p>Questions that connect descriptive analysis to business decisions without claiming more than the data can support.</p></div>
+      <div class="info-card"><h5>Analytical Rigor</h5><p>Confounder checks that changed the final conclusion instead of simply confirming the first visual pattern.</p></div>
+      <div class="info-card"><h5>Data Storytelling</h5><p>A narrative built around tension: more activation, less positivity, and a major rise in activated-negative music.</p></div>
+      <div class="info-card"><h5>Interdisciplinary Reasoning</h5><p>Psychological theory used as an interpretation layer, with a clear boundary between mechanism and causal proof.</p></div>
+      <div class="info-card"><h5>Product Thinking</h5><p>Recommendations that translate findings into segmentation, recommendation context, and the next data requirements for behavioral prediction.</p></div>
+    </div>
+    <p>Over a century, the emotional architecture of tracks in this Spotify dataset changed substantially. Music became more energetic, louder, increasingly danceable, and more likely to combine negative valence with high activation. Yet the apparent popularity advantage of that emotional profile largely disappeared once release year was controlled.</p>
+    <div class="callout"><strong>The value of the project</strong> is not a claim that people became sadder. It's a demonstration of how careful analysis can turn audio features into a useful emotional framework, and how validation can prevent an attractive pattern from becoming a bad business decision.</div>
+    <p><strong>Limits I'd state on the website:</strong></p>
+    <ul class="plain-list">
+      <li>This dataset is not a census of all music released worldwide.</li>
+      <li>Spotify audio features are algorithmic descriptors, not direct measurements of human emotion.</li>
+      <li>Popularity is current and time-dependent; it is not historical success at release.</li>
+      <li>The analysis is observational and does not establish causal psychological effects.</li>
+      <li>Genre, geography, marketing, playlist exposure, artist fame, and listener-level behavior are not controlled.</li>
+    </ul>
+  </div>
+  <div data-lang="it">
+    <p class="eyebrow">Risultato</p>
+    <h2>Cosa dimostra questo caso di studio</h2>
+    <div class="info-grid">
+      <div class="info-card"><h5>Mentalità da Data Engineer</h5><p>Pulizia, flag di qualità, campi temporali affidabili e definizioni delle feature prima della visualizzazione.</p></div>
+      <div class="info-card"><h5>Impostazione della Ricerca</h5><p>Domande che collegano l'analisi descrittiva alle decisioni di business senza affermare più di quanto i dati possano sostenere.</p></div>
+      <div class="info-card"><h5>Rigore Analitico</h5><p>Controlli sulle variabili confondenti che hanno cambiato la conclusione finale invece di limitarsi a confermare il primo schema visivo.</p></div>
+      <div class="info-card"><h5>Data Storytelling</h5><p>Una narrazione costruita attorno a una tensione: più attivazione, meno positività, e una forte crescita della musica activated-negative.</p></div>
+      <div class="info-card"><h5>Ragionamento Interdisciplinare</h5><p>Teoria psicologica usata come livello di interpretazione, con un confine chiaro tra meccanismo e prova causale.</p></div>
+      <div class="info-card"><h5>Product Thinking</h5><p>Raccomandazioni che traducono i risultati in segmentazione, contesto di raccomandazione e i prossimi dati necessari per la previsione comportamentale.</p></div>
+    </div>
+    <p>Nell'arco di un secolo, l'architettura emotiva dei brani in questo dataset Spotify è cambiata in modo sostanziale. La musica è diventata più energica, più forte, sempre più danceable, e più incline a combinare valence negativa con alta attivazione. Eppure l'apparente vantaggio di popolarità di quel profilo emotivo è in gran parte scomparso una volta controllato l'anno di uscita.</p>
+    <div class="callout"><strong>Il valore del progetto</strong> non è l'affermazione che le persone siano diventate più tristi. È la dimostrazione di come un'analisi attenta possa trasformare le audio feature in un framework emotivo utile, e di come la validazione possa evitare che uno schema attraente diventi una decisione di business sbagliata.</div>
+    <p><strong>Limiti che dichiarerei sul sito:</strong></p>
+    <ul class="plain-list">
+      <li>Questo dataset non è un censimento di tutta la musica pubblicata nel mondo.</li>
+      <li>Le audio feature di Spotify sono descrittori algoritmici, non misurazioni dirette dell'emozione umana.</li>
+      <li>La popolarità è attuale e dipendente dal tempo; non è il successo storico al momento dell'uscita.</li>
+      <li>L'analisi è osservazionale e non stabilisce effetti psicologici causali.</li>
+      <li>Genere, geografia, marketing, esposizione in playlist, fama dell'artista e comportamento a livello di singolo ascoltatore non sono controllati.</li>
+    </ul>
+  </div>
+</section>
+</div>
+</main>
+<!-- SECTION: CTA -->
+<section class="case-cta">
+  <div class="case-wide">
+    <div data-lang="en">
+      <p class="eyebrow" style="color:var(--teal)">Curious About the Data Side?</p>
+      <h2>I like it when the data disagrees with the obvious story.</h2>
+      <p>If you've got a dataset everyone's already drawn conclusions from, I'd enjoy checking whether those conclusions hold up.</p>
+      <div class="hero-cta">
+        <a href="index.html#work" class="btn btn-solid">← Back to portfolio</a>
+        <a href="index.html#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+    </div>
+    <div data-lang="it">
+      <p class="eyebrow" style="color:var(--teal)">Curioso del Lato Dati?</p>
+      <h2>Mi piace quando i dati contraddicono la storia ovvia.</h2>
+      <p>Se hai un dataset da cui tutti hanno già tratto conclusioni, mi piacerebbe verificare se quelle conclusioni resistono davvero.</p>
+      <div class="hero-cta">
+        <a href="index.html#work" class="btn btn-solid">← Torna al portfolio</a>
+        <a href="index.html#contact" class="btn btn-outline">Contattami</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js" defer></script>
+</body>
+</html>

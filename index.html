@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zahra Farajihormozi — Data Engineer & UX/Web Developer</title>
+<meta name="description" content="Portfolio of Zahra Farajihormozi — Data Engineer & Analyst, and UI/UX Designer & Web Developer, based in Bologna, Italy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Bonheur+Royale&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-row">
+    <a href="#top" class="logo"><img src="images/personal-logo.svg" alt="Personal Logo"></a>
+    <nav class="links" id="navLinks">
+      <a href="#about" data-lang="en">About</a>
+      <a href="#about" data-lang="it">Chi Sono</a>
+      <!-- 
+      <a href="#skills" data-lang="en">Skills</a>
+      <a href="#skills" data-lang="it">Competenze</a>
+      -->
+      <a href="#services" data-lang="en">Services</a>
+      <a href="#services" data-lang="it">Servizi</a>
+      <!-- 
+      <a href="#experience" data-lang="en">Experience</a>
+      <a href="#experience" data-lang="it">Esperienza</a>
+    -->
+      <a href="#work" data-lang="en">Work</a>
+      <a href="#work" data-lang="it">Progetti</a>
+      <div class="lang-switch" role="group" aria-label="Language / Lingua">
+        <button type="button" class="lang-btn is-active" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="it" aria-pressed="false">IT</button>
+      </div>
+      <a href="#contact" class="nav-cta" data-lang="en">Contact</a>
+      <a href="#contact" class="nav-cta" data-lang="it">Contatti</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<!-- SECTION: HERO -->
+<section class="hero wrap" aria-label="Introduction">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1>Zahra Farajihormozi</h1>
+      <div data-lang="en">
+        <p class="eyebrow">Based In Italy</p>
+        <p class="hero-thesis">From pixels to pipelines.</p>
+        <p class="hero-sub">UX/UI designer &amp; web developer turned Data Engineer &amp; Data Analyst. I turn data into human-centered stories using data analysis, UX thinking, and visual storytelling.</p>
+        <p class="hero-sub">I explore how data can reveal human behavior, social patterns, and better design and business decisions.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-solid">View my work →</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+      <div data-lang="it">
+        <p class="eyebrow">Con Base In Italia</p>
+        <p class="hero-thesis">Dai pixel alle pipeline.</p>
+        <p class="hero-sub">UX/UI designer e web developer, ora Data Engineer &amp; Data Analyst. Trasformo i dati in storie a misura d'uomo, unendo analisi dei dati, pensiero UX e visual storytelling.</p>
+        <p class="hero-sub">Esploro come i dati possano rivelare comportamenti umani, dinamiche sociali e decisioni migliori nel design e nel business.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-solid">Guarda i miei progetti →</a>
+          <a href="#contact" class="btn btn-outline">Contattami</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-glow" aria-hidden="true"></div>
+        <img src="images/IMG_5016.jpg" alt="Zahra Farajihormozi" class="photo" width="458" height="656">
+    </div>
+  </div>
+</section>
+<!-- SECTION: STATS 
+<section class="stats" aria-label="Highlights">
+  <div class="wrap stats-grid">
+    <div class="stat">
+      <span class="stat-num">18.5%</span>
+      <span class="stat-label">rise in online bookings after a UX redesign — Tehranpars Hospital</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">16%</span>
+      <span class="stat-label">increase in donations after a homepage redesign — Sayeh</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">5</span>
+      <span class="stat-label">roles held so far, across two disciplines — design and data</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">languages — Persian, English, Italian, French</span>
+    </div>
+  </div>
+</section>
+-->
+<!-- SECTION: ABOUT -->
+<section class="about section-pad" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div data-lang="en">
+        <div class="section-head" style="margin-bottom:var(--sp-3)">
+          <p class="eyebrow">About</p>
+          <h2>Two crafts, one habit of paying close attention</h2>
+        </div>
+        <div class="about-copy">
+          <p>I love creating things people can actually use, and I've come at that from two directions. I started in UX/UI design and web development, drawn to the small details of how people move through a screen, and how much a tiny change can shift an entire experience.</p>
+          <p>These days I bring that same attention to data, designing the pipelines and structures that turn raw information into something a business can actually act on. Different material, same instinct: notice what's not working, then rebuild it so it quietly does.</p>
+          <p>I'm currently working as a Data Engineer &amp; Analyst at BitApp. When I'm not deep in a pipeline or a prototype, you'll find me scouting out local cafés, sketching new ideas, or eating far too much coffee and croissant. 🍵🥐</p>
+        </div>
+      </div>
+      <div data-lang="it">
+        <div class="section-head" style="margin-bottom:var(--sp-3)">
+          <p class="eyebrow">Chi Sono</p>
+          <h2>Due mestieri, un'unica abitudine: prestare attenzione</h2>
+        </div>
+        <div class="about-copy">
+          <p>Amo creare cose che le persone possano davvero usare, e sono arrivata a questo obiettivo da due direzioni diverse. Ho iniziato nel design UX/UI e nello sviluppo web, affascinata dai piccoli dettagli di come le persone si muovono su uno schermo, e da quanto un minimo cambiamento possa trasformare un'intera esperienza.</p>
+          <p>Oggi porto la stessa attenzione ai dati, progettando le pipeline e le strutture che trasformano informazioni grezze in qualcosa su cui un'azienda possa davvero agire. Materiale diverso, lo stesso istinto: notare cosa non funziona, e poi ricostruirlo perché funzioni, in silenzio.</p>
+          <p>Attualmente lavoro come Data Engineer &amp; Analyst in BitApp. Quando non sono immersa in una pipeline o in un prototipo, mi troverete in cerca del miglior caffè in città, a disegnare nuove idee, o a mangiare troppi croissant. 🍵🥐</p>
+        </div>
+      </div>
+    </div>
+    <aside class="about-card">
+      <ul class="glance-list" data-lang="en">
+        <li><span>Based in</span><strong>Bologna, Italy</strong></li>
+        <li><span>Currently</span><strong>Data Engineer &amp; Analyst, BitApp</strong></li>
+        <li><span>Studied</span><strong>MSc Digital Humanities &amp; Digital Knowledge, Univ. of Bologna</strong></li>
+        <li><span>Speaks</span><strong>Persian, English, Italian, French</strong></li>
+      </ul>
+      <ul class="glance-list" data-lang="it">
+        <li><span>Con base a</span><strong>Bologna, Italia</strong></li>
+        <li><span>Attualmente</span><strong>Data Engineer &amp; Analyst, BitApp</strong></li>
+        <li><span>Formazione</span><strong>Laurea Magistrale in Digital Humanities &amp; Digital Knowledge, Univ. di Bologna</strong></li>
+        <li><span>Lingue parlate</span><strong>Persiano, Inglese, Italiano, Francese</strong></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+<!-- SECTION: SKILLS 
+<section class="skills section-pad alt-bg" id="skills">
+  <div class="wrap">
+    <div class="section-head" data-lang="en">
+      <p class="eyebrow">Skills</p>
+      <h2>What I bring to a data platform, or a design sprint</h2>
+    </div>
+    <div class="section-head" data-lang="it">
+      <p class="eyebrow">Competenze</p>
+      <h2>Cosa porto in una piattaforma dati, o in uno sprint di design</h2>
+    </div>
+    <div class="skills-grid" data-lang="en">
+      <div class="skill-card">
+        <h3>Data Engineering</h3>
+        <ul class="tag-list">
+          <li>Databricks</li><li>Azure</li><li>AWS / S3</li><li>Unity Catalog</li>
+          <li>Delta Lake</li><li>Medallion Architecture</li><li>ETL / ELT</li><li>CI/CD</li><li>Git · GitLab</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Data Analysis &amp; BI</h3>
+        <ul class="tag-list">
+          <li>Python</li><li>PySpark</li><li>SQL</li><li>Power BI</li><li>Tableau</li>
+          <li>Excel &amp; Power Query</li><li>A/B Testing</li><li>Statistical Modeling</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>UX Research &amp; UI Design</h3>
+        <ul class="tag-list">
+          <li>User Interviews</li><li>Journey Mapping</li><li>Personas</li><li>Information Architecture</li>
+          <li>Wireframing</li><li>Prototyping</li><li>Usability Testing</li><li>Card Sorting</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Web Development</h3>
+        <ul class="tag-list">
+          <li>HTML5</li><li>CSS3 · SASS</li><li>JavaScript</li><li>Bootstrap</li><li>PHP</li>
+          <li>WordPress</li><li>Webflow</li><li>C / C++</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Tools &amp; Ways of Working</h3>
+        <ul class="tag-list">
+          <li>Figma</li><li>Adobe XD · PS</li><li>Canva</li><li>Jira · Trello</li><li>Slack</li>
+          <li>Agile / Scrum</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skills-grid" data-lang="it">
+      <div class="skill-card">
+        <h3>Ingegneria dei Dati</h3>
+        <ul class="tag-list">
+          <li>Databricks</li><li>Azure</li><li>AWS / S3</li><li>Unity Catalog</li>
+          <li>Delta Lake</li><li>Medallion Architecture</li><li>ETL / ELT</li><li>CI/CD</li><li>Git · GitLab</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Analisi Dati &amp; BI</h3>
+        <ul class="tag-list">
+          <li>Python</li><li>PySpark</li><li>SQL</li><li>Power BI</li><li>Tableau</li>
+          <li>Excel &amp; Power Query</li><li>A/B Testing</li><li>Modelli Statistici</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Ricerca UX &amp; UI Design</h3>
+        <ul class="tag-list">
+          <li>Interviste Utente</li><li>Journey Mapping</li><li>Personas</li><li>Architettura dell'Informazione</li>
+          <li>Wireframing</li><li>Prototipazione</li><li>Test di Usabilità</li><li>Card Sorting</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Sviluppo Web</h3>
+        <ul class="tag-list">
+          <li>HTML5</li><li>CSS3 · SASS</li><li>JavaScript</li><li>Bootstrap</li><li>PHP</li>
+          <li>WordPress</li><li>Webflow</li><li>C / C++</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Strumenti &amp; Metodo di Lavoro</h3>
+        <ul class="tag-list">
+          <li>Figma</li><li>Adobe XD · PS</li><li>Canva</li><li>Jira · Trello</li><li>Slack</li>
+          <li>Agile / Scrum</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- SECTION: SERVICES -->
+<section class="services section-pad" id="services">
+  <div class="wrap">
+    <div class="section-head" data-lang="en">
+      <p class="eyebrow">Services</p>
+      <h2>How I can help</h2>
+      <p>Whether the deliverable is a dashboard or a homepage, the process looks the same: understand the problem first, then build something reliable.</p>
+    </div>
+    <div class="section-head" data-lang="it">
+      <p class="eyebrow">Servizi</p>
+      <h2>Come posso aiutarti</h2>
+      <p>Che il risultato finale sia una dashboard o una homepage, il processo è lo stesso: prima capire il problema, poi costruire qualcosa di solido.</p>
+    </div>
+    <div class="services-grid" data-lang="en">
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 L42 14 L24 22 L6 14 Z"/><path d="M6 24 L24 32 L42 24"/><path d="M6 34 L24 42 L42 34"/></svg>
+        </span>
+        <h3>Data Engineering</h3>
+        <p>Designing and building reliable data pipelines, from ingestion through transformation to analytics-ready datasets.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40 H42"/><path d="M12 40 V22"/><path d="M22 40 V13"/><path d="M32 40 V27"/></svg>
+        </span>
+        <h3>Data Analysis</h3>
+        <p>Turning raw data into clear, actionable insight through analysis, dashboards, and reporting.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="36" height="30" rx="3"/><path d="M6 16 H42"/><path d="M27 23 L36 30 L31.5 31 L34 37 L30 38.5 L27.5 32.5 L24 36 Z" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>UI/UX Design</h3>
+        <p>Researching, wireframing, and designing interfaces that are intuitive and genuinely easy to use.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 14 L7 24 L18 34"/><path d="M30 14 L41 24 L30 34"/><path d="M27 9 L21 39"/></svg>
+        </span>
+        <h3>Web Development</h3>
+        <p>Building responsive, accessible websites and interfaces that work well across every device.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="30" height="34" rx="3"/><rect x="17" y="6" width="14" height="7" rx="2" fill="currentColor" stroke="none"/><path d="M15 23 L20.5 28.5 L33 16"/><path d="M15 33 H33"/></svg>
+        </span>
+        <h3>Project Management</h3>
+        <p>Planning and coordinating projects end-to-end, keeping delivery on track and collaboration smooth.</p>
+      </div>
+    </div>
+    <div class="services-grid" data-lang="it">
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 L42 14 L24 22 L6 14 Z"/><path d="M6 24 L24 32 L42 24"/><path d="M6 34 L24 42 L42 34"/></svg>
+        </span>
+        <h3>Ingegneria dei Dati</h3>
+        <p>Progetto e costruisco pipeline dati affidabili, dall'ingestione alla trasformazione fino a dataset pronti per l'analisi.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40 H42"/><path d="M12 40 V22"/><path d="M22 40 V13"/><path d="M32 40 V27"/></svg>
+        </span>
+        <h3>Analisi dei Dati</h3>
+        <p>Trasformo dati grezzi in insight chiari e concreti attraverso analisi, dashboard e reportistica.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="36" height="30" rx="3"/><path d="M6 16 H42"/><path d="M27 23 L36 30 L31.5 31 L34 37 L30 38.5 L27.5 32.5 L24 36 Z" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>UI/UX Design</h3>
+        <p>Ricerco, progetto wireframe e disegno interfacce intuitive e davvero facili da usare.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 14 L7 24 L18 34"/><path d="M30 14 L41 24 L30 34"/><path d="M27 9 L21 39"/></svg>
+        </span>
+        <h3>Sviluppo Web</h3>
+        <p>Costruisco siti e interfacce responsive e accessibili, che funzionano bene su ogni dispositivo.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="30" height="34" rx="3"/><rect x="17" y="6" width="14" height="7" rx="2" fill="currentColor" stroke="none"/><path d="M15 23 L20.5 28.5 L33 16"/><path d="M15 33 H33"/></svg>
+        </span>
+        <h3>Gestione dei Progetti</h3>
+        <p>Pianifico e coordino i progetti dall'inizio alla fine, mantenendo le consegne puntuali e la collaborazione fluida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION: EXPERIENCE 
+<section class="experience section-pad alt-bg" id="experience">
+  <div class="wrap">
+    <div class="section-head" data-lang="en">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+    </div>
+    <div class="section-head" data-lang="it">
+      <p class="eyebrow">Esperienza</p>
+      <h2>Dove ho lavorato</h2>
+    </div>
+    <ol class="timeline" data-lang="en">
+      <li class="tl-item" data-type="data">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>Data Engineer &amp; Analyst</h3><span class="tl-date">Feb 2026 — Present</span></div>
+          <p class="tl-company">BitApp</p>
+          <p>Design, build, and optimize data pipelines on a modern cloud data platform — owning ingestion, transformation, validation, and modeling across the Bronze / Silver / Gold medallion architecture. Partner with cross-functional teams to translate business requirements into technical solutions, support KPI monitoring through Power BI dashboards, and maintain CI/CD and version control for a production-ready data infrastructure.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="data">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>Data Analyst</h3><span class="tl-date">Mar 2025 — Apr 2025</span></div>
+          <p class="tl-company">University of Bologna</p>
+          <p>Analyzed the Getty ULAN dataset (XML) to map 20th-century art centers and the geographic spread of art movements, using Python, PySpark, and SQL. Built structured datasets through custom extraction and cleaning pipelines, then visualized the findings in an interactive web app with charts, heatmaps, and geographic maps.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="design">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>UI/UX Designer &amp; Developer</h3><span class="tl-date">Mar 2025 — Jul 2025</span></div>
+          <p class="tl-company">EuroVideo</p>
+          <p>Led the redesign and development of EuroVideo's website end-to-end — project management, UX research, UI design, and implementation in WordPress/Elementor — to better showcase the company's video production and equipment rental services, with a focus on accessibility and SEO.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="design">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>UX Designer</h3><span class="tl-date">Apr 2023 — Sep 2023</span></div>
+          <p class="tl-company">Tehranpars Hospital — Website</p>
+          <p>Worked as UX researcher on the hospital's website — wireframes, information architecture, site maps, and prototypes. Improved the online appointment system through usability testing and a clearer, color-coded icon system, lifting online appointments by 18.5%.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="design">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>UX Researcher &amp; UI Designer</h3><span class="tl-date">Mar 2022 — Mar 2023</span></div>
+          <p class="tl-company">Sayeh — Website</p>
+          <p>Redesigned the homepage UI to improve user experience and engagement, and introduced a "Celebrities Who Participate in the Donation" feature — helping lift donations by 16% within two months.</p>
+        </div>
+      </li>
+    </ol>
+    <ol class="timeline" data-lang="it">
+      <li class="tl-item" data-type="data">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>Data Engineer &amp; Analyst</h3><span class="tl-date">Feb 2026 — Presente</span></div>
+          <p class="tl-company">BitApp</p>
+          <p>Progetto, costruisco e ottimizzo pipeline dati su una piattaforma dati cloud moderna, occupandomi di ingestione, trasformazione, validazione e modellazione secondo l'architettura a medaglione Bronze / Silver / Gold. Collaboro con team cross-funzionali per tradurre i requisiti di business in soluzioni tecniche solide, supporto il monitoraggio dei KPI tramite dashboard Power BI, e mantengo processi CI/CD e version control per un'infrastruttura dati pronta per la produzione.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="data">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>Data Analyst</h3><span class="tl-date">Mar 2025 — Apr 2025</span></div>
+          <p class="tl-company">Università di Bologna</p>
+          <p>Ho analizzato il dataset Getty ULAN (XML) per mappare i centri artistici del XX secolo e la diffusione geografica dei movimenti artistici, utilizzando Python, PySpark e SQL. Ho costruito dataset strutturati tramite pipeline di estrazione e pulizia personalizzate, poi ho visualizzato i risultati in una web app interattiva con grafici, heatmap e mappe geografiche.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="design">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>UI/UX Designer &amp; Developer</h3><span class="tl-date">Mar 2025 — Lug 2025</span></div>
+          <p class="tl-company">EuroVideo</p>
+          <p>Ho guidato il redesign e lo sviluppo del sito web di EuroVideo dall'inizio alla fine — project management, ricerca UX, UI design e implementazione in WordPress/Elementor — per valorizzare meglio i servizi di produzione video e noleggio attrezzature dell'azienda, con un focus su accessibilità e SEO.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="design">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>UX Designer</h3><span class="tl-date">Apr 2023 — Set 2023</span></div>
+          <p class="tl-company">Tehranpars Hospital — Sito Web</p>
+          <p>Ho lavorato come UX researcher sul sito web dell'ospedale — wireframe, architettura dell'informazione, mappe del sito e prototipi. Ho migliorato il sistema di prenotazione online attraverso test di usabilità e un sistema di icone a colori più chiaro, aumentando le prenotazioni online del 18,5%.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-type="design">
+        <div class="tl-marker" aria-hidden="true"></div>
+        <div class="tl-content">
+          <div class="tl-top"><h3>UX Researcher &amp; UI Designer</h3><span class="tl-date">Mar 2022 — Mar 2023</span></div>
+          <p class="tl-company">Sayeh — Sito Web</p>
+          <p>Ho ridisegnato la UI della homepage per migliorare l'esperienza utente e l'engagement, e ho introdotto la funzione "Celebrità che Partecipano alla Donazione", contribuendo ad aumentare le donazioni del 16% in due mesi.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+-->
+<!-- SECTION: WORK -->
+<section class="work section-pad" id="work">
+  <div class="wrap">
+    <div class="section-head" data-lang="en">
+      <p class="eyebrow">Selected Work</p>
+      <h2>A few things I've built</h2>
+    </div>
+    <div class="section-head" data-lang="it">
+      <p class="eyebrow">Progetti Selezionati</p>
+      <h2>Alcune cose che ho costruito</h2>
+    </div>
+
+    <div data-lang="en">
+      <div class="work-filters" role="group" aria-label="Filter work by category">
+        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All Work</button>
+        <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data Engineering &amp; Analyst</button>
+        <button type="button" class="filter-btn" data-filter="design" aria-pressed="false">Web Design and Development</button>
+      </div>
+      <div class="work-grid">
+        <article class="work-card" data-category="design">
+          <div class="work-top">
+            <div>
+              <h3>EuroVideo — Website Redesign</h3>
+                        <ul class="tag-list">
+            <li>UX Research</li><li>UI Design</li><li>WordPress</li><li>SEO</li>
+          </ul>
+            </div>
+          </div>
+          <p class="work-desc">Owned the full lifecycle of EuroVideo's website redesignو project management, UX research, UI design, and build, to modernize how the company presents its video production and equipment rental services. Focus areas: information architecture, accessibility, and SEO.</p>
+
+          <a href="eurovideo-case-study.html?lang=en" class="work-caselink">Read the full case study →</a>
+        </article>
+
+        <article class="work-card" data-category="design">
+          <div class="work-top">
+            <div>
+              <h3>CodeWise — Coding App for Teens</h3>
+              <ul class="tag-list">
+            <li>UX Research</li><li>UI/UX Design</li><li>Dual-Audience Design</li>
+          </ul>
+            </div>
+          </div>
+          <p class="work-desc">Designed a coding-education platform that had to work for two audiences at once, kids who needed it to feel like a game, and parents who needed to trust it was worth paying for. Built personas, service blueprints, and a full UI prototype from research through to final screens.</p>
+          <a href="codewise-case-study.html?lang=en" class="work-caselink">Read the full case study →</a>
+        </article>   
+        
+        <article class="work-card" data-category="design">
+          <div class="work-top">
+            <div>
+              <h3>A Matter of Taste — Asian Food Museum</h3>
+              <ul class="tag-list">
+            <li>UI/UX Design</li><li>HTML, CSS</li><li>JavaScript</li><li>JSON</li>
+          </ul>
+            </div>
+            <a class="work-link" href="https://asian-food-museum.github.io/Asian-Food-Museum/" target="_blank" rel="noopener noreferrer" aria-label="Asian Food Museum Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 L17 7"/><path d="M8 7 H17 V16"/></svg>
+            </a>
+          </div>
+          <p class="work-desc">Designed and Developed an interactive Food Museum website that celebrates Asia’s rich culinary history. The design features user-friendly navigation, responsive layouts, and a dark-themed aesthetic that reflects the museum’s historical concept.</p>
+        </article> 
+
+        <article class="work-card" data-category="data">
+          <div class="work-top">
+            <div>
+              <h3>Mapping Art Movements — Getty ULAN</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>PySpark</li><li>SQL</li><li>Data Viz</li>
+          </ul>
+            </div>
+            <a class="work-link" href="https://ulan-artist-hubs-data-analysis.github.io/ULAN-Artist-Hubs/" target="_blank" rel="noopener noreferrer" aria-label="VULAN Artistic Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 L17 7"/><path d="M8 7 H17 V16"/></svg>
+            </a>
+          </div>
+          <p class="work-desc">Parsed the Getty ULAN dataset (raw XML) to trace 20th-century art centers and how art movements spread geographically. Built a cleaning and transformation pipeline in Python, PySpark, and SQL, then surfaced the results in an interactive web app with charts, heatmaps, and maps.</p>
+        </article>
+                <article class="work-card" data-category="data">
+          <div class="work-top">
+            <div>
+              <h3>From Happiness to Intensity — A Century of Music</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>PySpark</li><li>ETL</li><li>Data Viz</li><li>Tableau</li>
+          </ul>
+            </div>
+          </div>
+          <p class="work-desc">Analyzed 169,909 Spotify tracks from 1921–2020 to trace how music's emotional profile shifted over a century, then tested whether that shift actually explains today's popularity, exposing a classic confounding-variable trap along the way.</p>
+
+          <a href="spotify-case-study.html?lang=en" class="work-caselink">Read the full case study →</a>
+        </article>
+      </div>
+    </div>
+
+    <div data-lang="it">
+      <div class="work-filters" role="group" aria-label="Filtra i progetti per categoria">
+        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">Tutti i Progetti</button>
+        <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data Engineering &amp; Analyst</button>
+        <button type="button" class="filter-btn" data-filter="design" aria-pressed="false">Web Design e Sviluppo</button>
+      </div>
+      <div class="work-grid">
+        <article class="work-card" data-category="design">
+          <div class="work-top">
+            <div>
+              <h3>EuroVideo — Redesign del Sito Web</h3>
+              <ul class="tag-list">
+                <li>Ricerca UX</li><li>UI Design</li><li>WordPress</li><li>SEO</li>
+              </ul>
+            </div>
+          </div>
+          <p class="work-desc">Ho gestito l'intero ciclo di vita del redesign del sito di EuroVideo, project management, ricerca UX, UI design e sviluppo, per modernizzare il modo in cui l'azienda presenta i suoi servizi di produzione video e noleggio attrezzature. Aree di focus: architettura dell'informazione, accessibilità e SEO.</p>
+
+          <a href="eurovideo-case-study.html?lang=it" class="work-caselink">Leggi il caso di studio completo →</a>
+        </article>
+
+         <article class="work-card" data-category="design">
+          <div class="work-top">
+            <div>
+              <h3>CodeWise — App di Coding per Teens</h3>
+            <ul class="tag-list">
+            <li>Ricerca UX</li><li>UI/UX Design</li><li>Dual-Audience Design</li>
+            </ul>
+            </div>
+          </div>
+          <p class="work-desc">Ho progettato una piattaforma di coding educativo che doveva funzionare per due pubblici insieme, bambini per cui doveva sembrare un gioco, e genitori che dovevano fidarsi di pagarla. Ho costruito personas, service blueprint e un prototipo UI completo, dalla ricerca alle schermate finali.</p>
+
+          <a href="codewise-case-study.html?lang=it" class="work-caselink">Leggi il caso di studio completo →</a>
+        </article>
+
+        <article class="work-card" data-category="design">
+          <div class="work-top">
+            <div>
+              <h3>A Matter of Taste — Asian Food Museum</h3>
+              <ul class="tag-list">
+            <li>UI/UX Design</li><li>HTML, CSS</li><li>JavaScript</li><li>JSON</li>
+          </ul>
+            </div>
+            <a class="work-link" href="https://asian-food-museum.github.io/Asian-Food-Museum/" target="_blank" rel="noopener noreferrer" aria-label="Asian Food Museum Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 L17 7"/><path d="M8 7 H17 V16"/></svg>
+            </a>
+          </div>
+          <p class="work-desc">Ho progettato e sviluppato il sito web interattivo per il Food Museum dedicato alla ricca storia culinaria asiatica. Il design offre una navigazione intuitiva, layout responsive e uno stile dark in linea con il concept storico del museo.</p>
+        </article>         
+
+        <article class="work-card" data-category="data">
+          <div class="work-top">
+            <div>
+              <h3>Mappare i Movimenti Artistici — Getty ULAN</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>PySpark</li><li>SQL</li><li>Data Viz</li>
+          </ul>
+            </div>
+            <a class="work-link" href="https://ulan-artist-hubs-data-analysis.github.io/ULAN-Artist-Hubs/" target="_blank" rel="noopener noreferrer" aria-label="VULAN Artistic Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 L17 7"/><path d="M8 7 H17 V16"/></svg>
+            </a>
+          </div>
+          <p class="work-desc">Ho analizzato il dataset Getty ULAN (XML puro) per tracciare i centri artistici del XX secolo e la diffusione geografica dei movimenti artistici. Ho costruito una pipeline di pulizia e trasformazione in Python, PySpark e SQL, poi ho presentato i risultati in una web app interattiva con grafici, heatmap e mappe.</p>
+        </article>
+                <article class="work-card" data-category="data">
+          <div class="work-top">
+            <div>
+              <h3>Dalla Felicità all'Intensità — Un Secolo di Musica</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>PySpark</li><li>ETL</li><li>Data Viz</li><li>Tableau</li>
+          </ul>
+            </div>
+          </div>
+          <p class="work-desc">Ho analizzato 169.909 brani Spotify dal 1921 al 2020 per ricostruire come è cambiato il profilo emotivo della musica in un secolo, poi ho verificato se quel cambiamento spiega davvero la popolarità di oggi, scoprendo lungo il percorso una classica trappola statistica da variabile confondente.</p>
+          <a href="spotify-case-study.html?lang=it" class="work-caselink">Leggi il caso di studio completo →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION: EDUCATION 
+<section class="education section-pad alt-bg" id="education">
+  <div class="wrap edu-grid">
+    <div data-lang="en">
+      <div class="section-head" style="margin-bottom:var(--sp-3)">
+        <p class="eyebrow">Education</p>
+        <h2>Background</h2>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>MSc, Digital Humanities and Digital Knowledge</h3><span class="edu-date">Oct 2023 — Jun 2026</span></div>
+        <p class="edu-school">University of Bologna, Italy</p>
+        <p>Thesis on the UX/UI design and web development of an Italian multimedia SME's website (EuroVideo), focused on information architecture, SEO, and WordPress/Elementor implementation.</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>BSc, Computer Engineering</h3><span class="edu-date">Sep 2018 — Sep 2023</span></div>
+        <p class="edu-school">K. N. Toosi University of Technology, Tehran, Iran</p>
+      </div>
+    </div>
+    <div data-lang="it">
+      <div class="section-head" style="margin-bottom:var(--sp-3)">
+        <p class="eyebrow">Formazione</p>
+        <h2>Percorso</h2>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>Laurea Magistrale, Digital Humanities and Digital Knowledge</h3><span class="edu-date">Ott 2023 — Giu 2026</span></div>
+        <p class="edu-school">Università di Bologna, Italia</p>
+        <p>Tesi sulla progettazione UX/UI e sullo sviluppo web del sito di una PMI multimediale italiana (EuroVideo), con focus su architettura dell'informazione, SEO e implementazione WordPress/Elementor.</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>Laurea Triennale, Ingegneria Informatica</h3><span class="edu-date">Set 2018 — Set 2023</span></div>
+        <p class="edu-school">K. N. Toosi University of Technology, Teheran, Iran</p>
+      </div>
+    </div>
+    <div class="lang-card" data-lang="en">
+      <h3>Languages</h3>
+      <div class="lang-row"><span class="lang-name">Persian</span><span class="lang-level">Native</span></div>
+      <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Full professional</span></div>
+      <div class="lang-row"><span class="lang-name">Italian</span><span class="lang-level">Professional working</span></div>
+      <div class="lang-row"><span class="lang-name">French</span><span class="lang-level">Limited working</span></div>
+    </div>
+    <div class="lang-card" data-lang="it">
+      <h3>Lingue</h3>
+      <div class="lang-row"><span class="lang-name">Persiano</span><span class="lang-level">Madrelingua</span></div>
+      <div class="lang-row"><span class="lang-name">Inglese</span><span class="lang-level">Avanzato</span></div>
+      <div class="lang-row"><span class="lang-name">Italiano</span><span class="lang-level">Intermedio</span></div>
+      <div class="lang-row"><span class="lang-name">Francese</span><span class="lang-level">Elementare</span></div>
+    </div>
+  </div>
+</section>
+</main>
+-->
+<!-- SECTION: FOOTER -->
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div data-lang="en">
+      <div class="footer-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk.</h2>
+        <p>Open to data engineering &amp; analytics roles, web or product design work, or just a good conversation about either. My inbox is the fastest way to reach me.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:zahrafarajih@gmail.com">
+          <span>Email</span><strong>zahrafarajih@gmail.com</strong>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/zahrafarajih/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span><strong>in/zahrafarajih</strong>
+        </a>
+        <a class="contact-item" href="https://drive.google.com/file/d/1CBr6FzWT74l4FM3W9meVAO8waPo9JWVB/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <span>CV</span><strong>My CV</strong>
+        </a>
+        <a class="contact-item" href="https://github.com/zahrafarajih" target="_blank" rel="noopener noreferrer">
+          <span>Github</span><strong>My Github</strong>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Zahra Farajihormozi</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <div data-lang="it">
+      <div class="footer-head">
+        <p class="eyebrow">Contatti</p>
+        <h2>Parliamone.</h2>
+        <p>Aperta a ruoli in data engineering &amp; analytics, progetti di web o product design, o semplicemente una buona conversazione su uno dei due temi. La mia email è il modo più veloce per raggiungermi.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:zahrafarajih@gmail.com">
+          <span>Email</span><strong>zahrafarajih@gmail.com</strong>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/zahrafarajih/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span><strong>in/zahrafarajih</strong>
+        </a>
+        <a class="contact-item" href="https://drive.google.com/file/d/14mVWXG2xdMpFY_EbA27OdGKg8O9PPUi0/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <span>CV</span><strong>Mio CV</strong>
+        </a>
+        <a class="contact-item" href="https://github.com/zahrafarajih" target="_blank" rel="noopener noreferrer">
+          <span>Github</span><strong>Mio Github</strong>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Zahra Farajihormozi</span>
+        <a href="#top">Torna su ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
